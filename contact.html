@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> Vente de chaussure </title>
+        <link rel="stylesheet" type="text/css" href="css/contact.css">
+
+    </head>
+    <body>
+        <p>Nous Contacter</p>
+        <div id="identite">
+            <form method="post" action="traitement.php">
+                <p>
+                    <label for="prénom"> </label>
+                    <input type="text" name="prénom" class="nom" placeholder="Prenom" maxlength="10" font-family="arial"/>
+                </p>
+            </form>
+            <form method="post" action="traitement.php">
+                <p>
+                    <label for="nom"> </label>
+                    <input type="text" name="nom" class="nom" placeholder="Nom"maxlength="10" />
+                </p>
+            </form>
+
+        </div>
+        <div id="mail">
+            <form method="post" action="traitement.php">
+                <p>
+                    <label for="email"> </label>
+                    <input type="text" name="email" class="email" placeholder="Email"maxlength="10" font-family="arial"/>
+                </p>
+            </form>
+
+        </div>
+        <div id="mexe">
+            <form method="post" action="traitement.php">
+                <p>
+                    <div id="conteneur">
+                        <input type="radio" name="homme" class="sexe" /> <label for="homme"><div class="se">Homme</div></label><br />
+                        <input type="radio" name="femme" class="sexe" /> <label for="femme"><div class="se"> Femme</div></label><br />
+                    </div>
+                </p>
+             </form>
+             <form method="post" action="traitement.php">
+                <p>
+                    <label for="prénom"> </label>
+                    <input type="text" name="prénom" class="nom" placeholder="Metier" font-family="arial"/>
+                </p>
+            </form>
+
+        </div>
+        <div id="sujet">
+            <form method="post" action="traitement.php">
+                <p>
+                    <label for="nom"> </label>
+                    <input type="text" name="nom" class="email" placeholder="Sujet" maxlength="10" />
+                </p>
+            </form>
+        </div>
+        <div id="sujet2">
+            <form method="post" action="traitement.php">
+                <p>
+                    <label for="nom"> </label>
+                    <input type="text" name="nom" class="sujet2" placeholder="Sujet" maxlength="10" />
+                </p>
+            </form>
+        </div>
+
+        </div>
+
+    </body>
+</html>
