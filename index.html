@@ -3,36 +3,67 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/index.css">
         <title>Document</title>
     </head>
 
     <body>
         <header>
+
             <div id="top-bar">
-                <img id="logo" src="img/logo.svg" alt="logo de Shoes zone">
-                <img id="account" src="img/account logo.svg" alt="account image">
+                <img class="logo" src="img/logo.svg" alt="logo de Shoes zone">
+                <div id="marker">Soldes ! Jusqu'à -50 %</div>
+                <img class="account" src="img/account logo.svg" alt="account image">
             </div>
-            <div id="marker">Soldes ! Jusqu'à -50 %</div>
-            <nav id="main-nav" class="inline">
-                <ul>
+
+            <nav id="main-nav">
+                <ul class="inline main">
+                    <li> <a href="index.html">Accueil</a> </li>
                     <li class="dropdown">
-                        <a class="dropdown-title" href="index.html">Accueil</a>
-                        <nav class="dropdown-container inline">
-                            <ul>
-                                <li>Nike</li>
-                                <li>Jordan</li>
-                                <li>Adidas</li>
-                            </ul>
-                        </nav>
+                        <p class="dropdown-title">Catalogue</p>
+                        <ul class="inline secondary">
+                            <li>Nike</li>
+                            <li>Jordan</li>
+                            <li>Adidas</li>
+                        </ul>
                     </li>
-                    <li><a href="catalogue.html">Catalogue</a></li>
                     <li><a href="Contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
-        <main>
 
+        <main>
+            <div id="values">
+                <p class="title"> Nos valeurs: </p>
+
+                <div class="card">
+                    <img src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/000000/external-verified-reputation-bearicons-gradient-bearicons.png" alt="" class="icon">
+                    <div>
+                        <p class="title"> Authenticité </p>
+                        <p lcass="description"> Shoes Zone s'engage a propose d'authentique paire de chaussure de marque</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://img.icons8.com/nolan/64/cheap.png" alt="" class="icon">
+                    <div>
+                        <p class="title"> Prix </p>
+                        <p class="description"> Shoes Zone s'engage a propose les paire a faible prix. Moins chère que chez les marques</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://img.icons8.com/nolan/64/out-of-stock.png" alt="" class="icon">
+                    <div>
+                        <p class="title"> Stock </p>
+                        <p class="description"> Shoes Zone s'engage a toujours avoir les paire que vous voulez en stock</p>
+                    </div>
+                </div>
+            </div>
+
+            
         </main>
+        
+
         <footer>
             <section id="footer-logo">
                 <img src="img/logo.svg">
@@ -44,10 +75,10 @@
                 <div class="media-list">
                     <p class="title">Follow us :</p>
                     <ul class="list">
-                        <li> <a href="www.facebook.com"> <img class="facebook hoverable icon"/> </a></li>
-                        <li> <a href="www.instagram.com"> <img class="instagram hoverable icon"/> </a></li>
-                        <li> <a href="www.twitter.com"> <img class="twitter hoverable icon"/> </a></li>
-                        <li> <a href="www.youtube.com"> <img class="youtube hoverable icon"/> </a></li>
+                        <li> <a href="https://www.facebook.com"> <img class="facebook hoverable icon"/> </a></li>
+                        <li> <a href="https://www.instagram.com"> <img class="instagram hoverable icon"/> </a></li>
+                        <li> <a href="https://www.twitter.com"> <img class="twitter hoverable icon"/> </a></li>
+                        <li> <a href="https://www.youtube.com"> <img class="youtube hoverable icon"/> </a></li>
                     </ul>
                 </div>
 
@@ -71,180 +102,3 @@
         </footer>
     </body>
 </html>
-
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    a { color: inherit; }
-    li { list-style: none; }
-    img { max-width: 100%;}
-
-
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@300&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1 0 0;
-}
-
-header {
-    position: relative;
-    background-color: white;
-    padding: 0.5em 2em;
-
-    font-family: Kreon, serif;
-}
-
-#top-bar {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#marker {
-    position: absolute;
-    left: 10em;
-    top: 1em;
-    font-family: "Permanent Marker", cursive;
-    color: red;
-}
-#logo {
-    width: 17.5em;
-}
-#account{
-    width: 2.5em;
-}
-
-nav.inline > ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    font-size: 1.5em;
-}
-nav > ul > li {
-    list-style-type: none;
-}
-
-.dropdown-container {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    background-color: white;
-}
-
-body {
-    background-color: whitesmoke;
-}
-
-
-    span.ShoesZone {
-        font-style: italic;
-    }
-
-    footer {
-        display: grid;
-        grid-template-columns: 2fr 5fr 2fr;
-        
-        padding: 10px 0;
-
-        background-color: grey;
-        color: whitesmoke;
-    }
-
-    footer > section {
-        padding: 0 20px;
-    }
-
-    #footer-logo >img {
-        background-color: white;
-        border-radius: 10px;
-        margin-top: 10px;
-    }
-
-    #footer-content {
-        position: relative;
-    }
-    #footer-content::before {
-        content: ' ';
-        position: absolute;
-        top: 20px; bottom: 20px;
-        left: 0; right: 0;
-
-        border-left: 1px solid;
-        border-right: 1px solid;
-    }
-
-    .media-list {
-        text-align: center;
-    }
-    .media-list > ul.list > li {
-        display: inline-block;
-    }
-
-    #copyright {
-        text-align: center;
-    }
-
-    #footer-sitemap > h1 {
-        text-align: center;
-    }
-    #footer-sitemap ul {
-        margin-left: 10px;
-    }
-    #footer-sitemap > ul li::before {
-        content: "»"
-    }
-
-    img.youtube {
-        -webkit-mask-image: url("img/media/icons8-youtube.svg");
-        mask-image: url("img/media/icons8-youtube.svg");
-        --hover-color: red;
-    }
-
-    img.facebook {
-        -webkit-mask-image: url("img/media/icons8-facebook.svg");
-        mask-image: url("img/media/icons8-facebook.svg");
-        --hover-color: blue;
-    }
-    img.instagram {
-        -webkit-mask-image: url("img/media/icons8-instagram.svg");
-        mask-image: url("img/media/icons8-instagram.svg");
-        --hover-color: linear-gradient(65deg, yellow, red, rgb(109, 0, 172));
-    }
-    img.twitter {
-        -webkit-mask-image: url("img/media/icons8-twitter.svg");
-        mask-image: url("img/media/icons8-twitter.svg");
-        --hover-color: #03a9f4;
-    }
-    
-    .media-list img.icon {
-        height: 48px;
-        width: 48px;
-
-        -webkit-mask-size: cover;
-        mask-size: cover;
-
-        background: whitesmoke;
-    }
-    img.icon:hover {
-        background: var(--hover-color);   
-    }
-
-</style>

@@ -1,0 +1,62 @@
+body {
+    background-color: whitesmoke;
+}
+
+
+
+main {
+    position: relative;
+    margin-top: 150px;
+}
+
+#values {
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+#values > .title {
+    top: 0px;
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.card {
+    position: relative;
+    height: 150px;
+    width: 320px;
+    background-color: white;
+    border-radius: 25px;
+
+    box-shadow: 0 1px 5px grey;
+}
+
+.card > .icon {
+    position: absolute;
+
+    width: 80px;
+    height: 80px;
+
+    top: 35px;
+    left: 10px;
+}
+
+.card > div {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 100px; right: 0;
+    display: flex;
+    margin: 5px;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.card > div .title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
