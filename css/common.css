@@ -21,12 +21,14 @@ body {
 
 main {
     flex-grow: 1;
+    z-index: 999;
 }
 
 /* =========== header ======== */
 header {
     box-shadow:  0 2px 5px grey;
     background-color: white;
+    z-index: 1000;
 }
 
 #top-bar {
@@ -100,20 +102,22 @@ span.ShoesZone {
 }
 
 footer {
+    z-index: 1000;
     display: grid;
     grid-template-columns: 2fr 5fr 2fr;
     
     padding: 10px 0;
 
-    background-color: grey;
+    background-color: rgb(56, 56, 56);
     color: whitesmoke;
+    box-shadow: 0 0 5px grey;
 }
 
 footer > section {
     padding: 0 20px;
 }
 
-#footer-logo >img {
+#footer-logo > img {
     background-color: white;
     border-radius: 10px;
     margin-top: 10px;
@@ -190,4 +194,20 @@ img.icon:hover {
 
 #footer-sitemap a:hover {
     font-style: italic;
+}
+
+
+    
+html::-webkit-scrollbar {
+    background-color: white;
+    width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(148, 148, 148);
+    border-radius: 5px;
+}
+
+html::-webkit-scrollbar-button {
+    height: 15px;
 }

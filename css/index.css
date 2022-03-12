@@ -5,21 +5,25 @@ body {
 
 
 main {
+    z-index: -1;
     position: relative;
-    margin-top: 150px;
+    background-image: url(/img/Running.jpg);
+    background-position: center;
 }
 
 #values {
-    width: 80%;
-    margin: auto;
-    padding-top: 250px;
+    position: absolute;
+    bottom: 15%;
+    width: 80%; left: 10%;
+    margin-right: auto;
+    
     display: flex;
     flex-flow: row;
     justify-content: space-around;
 }
 
 #values > .title {
-    top: 200px;
+    top: 0;
     position: absolute;
     font-weight: bold;
     font-size: 1.5em;
@@ -27,6 +31,7 @@ main {
 
 .card {
     position: relative;
+    top: 50px;
     height: 150px;
     width: 320px;
     background-color: white;

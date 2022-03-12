@@ -1,0 +1,115 @@
+
+main {
+    position: relative;
+    display: flex;
+}
+
+main > aside {
+    flex: 1 0 0;
+    background-color: white;
+    box-shadow: 0 0 5px grey;
+}
+
+aside > nav {
+    margin-top: 25px;
+    position: sticky;
+    top: 25px;
+}
+
+aside > nav > h1 {
+    width: 50%;
+    margin: 25px auto 5px auto;
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #cccccc;
+}
+
+aside > nav > ul > li {
+    padding: 5px 10px;
+    border: 1px solid transparent;
+}
+
+aside > nav > ul > li:hover {
+    background-color: whitesmoke;
+    border: 1px solid grey;
+}
+
+aside li > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+#catalog {
+    flex: 6 0 0; 
+    margin: 0 50px;
+}
+
+#catalog > h1 {
+    width: 25%;
+    margin: 25px auto 5px auto;
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #cccccc;
+}
+
+#catalog table {
+    width: 100%;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 0 15px; /* coller les cellules & espacer les lignes */
+}
+
+#catalog table img {
+    height: 120px;
+}
+
+/* taille des colonnes */
+#catalog table > thead th:nth-child(1) { width: 15%; min-width: 137px;}
+#catalog table > thead th:nth-child(2) { width: 20%;}
+#catalog table > thead th:nth-child(3) { width: 50%;}
+#catalog table > thead th:nth-child(4) { width: 15%;}
+
+/* style des ligne*/
+#catalog tr {
+    height: 50px;
+    background-color: white;
+    text-align: center;
+
+    --border-style : 3px solid red;
+    --border-radius: 25px
+}
+#catalog tbody tr { height: 100px;}
+
+/* bordure des ligne (border ne fonctionne pas sur tr)*/
+#catalog tbody td{
+    border-bottom: var(--border-style);
+    border-top: var(--border-style);
+}
+#catalog tbody td:first-child { border-left: var(--border-style);}
+#catalog tbody td:last-child { border-right: var(--border-style);}
+
+#catalog tr :first-child {
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    padding-left: calc(var(--border-radius)/2);
+}
+#catalog tr :last-child {
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    padding-right: calc(var(--border-radius)/2);
+}
+
+#catalog tbody td:nth-child(4) {
+    font-size: 2em;
+}
+
+td {
+    overflow: hidden;
+}
+
+#posFix1 {
+    position: relative;
+    top:-40px;
+}
