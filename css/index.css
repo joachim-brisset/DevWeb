@@ -12,14 +12,14 @@ main {
 #values {
     width: 80%;
     margin: auto;
-    padding-top: 40px;
+    padding-top: 250px;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
 }
 
 #values > .title {
-    top: 0px;
+    top: 200px;
     position: absolute;
     font-weight: bold;
     font-size: 1.5em;

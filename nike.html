@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoesZone | Nike </title>
+
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <header>
+
+        <div id="top-bar">
+            <img class="logo" src="img/logo.svg" alt="logo de Shoes zone">
+            <div id="marker">Soldes ! Jusqu'à -50 %</div>
+            <img class="account" src="img/account logo.svg" alt="account image">
+        </div>
+
+        <nav id="main-nav">
+            <ul class="inline main">
+                <li> <a href="index.html">Accueil</a> </li>
+                <li class="dropdown">
+                    <p class="dropdown-title">Catalogue</p>
+                    <ul class="inline secondary">
+                        <li><a href="nike.html">Nike </a></li>
+                        <li><a href="puma.html">Puma </a></li>
+                        <li><a href="adidas.html">Adidas </a></li>
+                    </ul>
+                </li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <nav>
+            <p> Catalogue </p>
+            <ul>
+                <li><a href="nike.html">Nike </a></li>
+                <li><a href="puma.html">Puma </a></li>
+                <li><a href="adidas.html">Adidas </a></li>
+            </ul>
+        </nav>
+        <table id="catalog">
+            <thead>
+                <tr>
+                    <th>Aperçu</th> <th>Reference</th> <th>Designation </th> <th>Prix</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="img/adidas 1.jfif"></td> <td>A20220101-001</td> <td>Chaussure Puma rouge et noir</td> <td>126€</td>
+                </tr>
+                <tr>
+                    <td><img src="img/adidas 2.jfif"></td> <td>A20220101-002</td> <td>Chaussure Puma rouge et noir</td> <td>126€</td>
+                </tr>
+                <tr>
+                    <td><img src="img/adidas 3.jfif"></td> <td>A20220101-003</td> <td>Chaussure Puma rouge et noir</td> <td>126€</td>
+                </tr>
+                <tr>
+                    <td><img src="img/adidas 4.jfif"></td> <td>A20220101-004</td> <td>Chaussure Puma rouge et noir</td> <td>126€</td>
+                </tr>
+                <tr>
+                    <td><img id="posFix1" src="img/adidas 5.jfif"></td> <td>A20220101-005</td> <td>Chaussure Puma rouge et noir</td> <td>126€</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <section id="footer-logo">
+            <img src="img/logo.svg">
+        </section>
+
+        <section id="footer-content">
+            <p><span class="ShoesZone">Shoes Zone</span> est une entreprise de vente de d’authentique chaussure de fameuse marque sportive  a prix réduit.</p>
+            <p>Aucun des produit affichés n’est l’oeuvre de <span class="ShoesZone">Shoes Zone</span>.</p>
+            <div class="media-list">
+                <p class="title">Follow us :</p>
+                <ul class="list">
+                    <li> <a href="https://www.facebook.com"> <img class="facebook hoverable icon"/> </a></li>
+                    <li> <a href="https://www.instagram.com"> <img class="instagram hoverable icon"/> </a></li>
+                    <li> <a href="https://www.twitter.com"> <img class="twitter hoverable icon"/> </a></li>
+                    <li> <a href="https://www.youtube.com"> <img class="youtube hoverable icon"/> </a></li>
+                </ul>
+            </div>
+
+            <p id="copyright"> Copyright &copy <span class="ShoesZone">Shoes Zone</span> 2022. All right reserved.</p>
+        </section>
+
+        <section id="footer-sitemap">
+            <h1> Sitemap</h1>
+            <ul>
+                <li> <a href="index.html"> Home </a></li>
+                <li> Catalogue 
+                    <ul>
+                        <li> <a href="nike.html"> Nike shoes</a></li>
+                        <li> <a href="jordan.html"> Jordan shoes</a></li>
+                        <li> <a href="adidas.html"> Adidas shoes</a></li>
+                    </ul>
+                </li>
+                <li> <a href="contact.html">Contact</a></li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>
+
+<style>
+    main > nav {
+        display: block;
+        position: sticky;
+    }
+
+
+
+    #catalog img {
+        height: 120px;
+    }
+
+    #catalog {
+        width: 80%;
+        margin: auto; /* centre la table */
+
+        border-collapse: separate;
+        border-spacing: 0 15px; /* coller les cellules & espacer les lignes */
+    }
+
+    /* taille des colonnes */
+    #catalog > thead th:nth-child(1) { width: 15%;}
+    #catalog > thead th:nth-child(2) { width: 20%;}
+    #catalog > thead th:nth-child(3) { width: 50%;}
+    #catalog > thead th:nth-child(4) { width: 15%;}
+
+    /* style des ligne*/
+    #catalog tr {
+        height: 50px;
+        background-color: white;
+        text-align: center;
+
+        --border-style : 3px solid red;
+        --border-radius: 25px
+    }
+    #catalog tbody tr { height: 100px;}
+
+    /* bordure des ligne (border ne fonctionne pas sur tr)*/
+    #catalog tbody td{
+        border-bottom: var(--border-style);
+        border-top: var(--border-style);
+    }
+    #catalog tbody td:first-child { border-left: var(--border-style);}
+    #catalog tbody td:last-child { border-right: var(--border-style);}
+
+    #catalog tr :first-child {
+        border-top-left-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
+        padding-left: calc(var(--border-radius)/2);
+    }
+    #catalog tr :last-child {
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+        padding-right: calc(var(--border-radius)/2);
+    }
+
+    #catalog tbody td:nth-child(4) {
+        font-size: 2em;
+    }
+
+    td {
+        overflow: hidden;
+    }
+
+    #posFix1 {
+        position: relative;
+        top:-40px;
+    }
+
+</style>

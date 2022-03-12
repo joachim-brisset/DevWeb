@@ -16,8 +16,12 @@ body {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    background-color: whitesmoke;
 }
 
+main {
+    flex-grow: 1;
+}
 
 /* =========== header ======== */
 header {
