@@ -2,71 +2,175 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title> Vente de chaussure </title>
+        <title> ShoesZone | Contact </title>
+
+        <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" type="text/css" href="css/contact.css">
-
     </head>
+
     <body>
-        <p>Nous Contacter</p>
-        <div id="identite">
-            <form method="post" action="traitement.php">
-                <p>
-                    <label for="prénom"> </label>
-                    <input type="text" name="prénom" class="nom" placeholder="Prenom" maxlength="10" font-family="arial"/>
-                </p>
-            </form>
-            <form method="post" action="traitement.php">
-                <p>
-                    <label for="nom"> </label>
-                    <input type="text" name="nom" class="nom" placeholder="Nom"maxlength="10" />
-                </p>
-            </form>
+        <header>
 
-        </div>
-        <div id="mail">
-            <form method="post" action="traitement.php">
-                <p>
-                    <label for="email"> </label>
-                    <input type="text" name="email" class="email" placeholder="Email"maxlength="10" font-family="arial"/>
-                </p>
-            </form>
+            <div id="top-bar">
+                <img class="logo" src="img/logo.svg" alt="logo de Shoes zone">
+                <div id="marker">Soldes ! Jusqu'à -50 %</div>
+                <img class="account" src="img/account logo.svg" alt="account image">
+            </div>
+    
+            <nav id="main-nav">
+                <ul class="inline main">
+                    <li> <a href="index.html">Accueil</a> </li>
+                    <li class="dropdown">
+                        <p class="dropdown-title">Catalogue</p>
+                        <ul class="inline secondary">
+                            <li><a href="nike.html">Nike </a></li>
+                            <li><a href="puma.html">Puma </a></li>
+                            <li><a href="adidas.html">Adidas </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        </div>
-        <div id="mexe">
-            <form method="post" action="traitement.php">
-                <p>
-                    <div id="conteneur">
-                        <input type="radio" name="homme" class="sexe" /> <label for="homme"><div class="se">Homme</div></label><br />
-                        <input type="radio" name="femme" class="sexe" /> <label for="femme"><div class="se"> Femme</div></label><br />
+
+        <main>
+            <h1> Nous contacter : </h1>
+            <form method="POST" action="contact.php">
+                    <input type="text" id="prenom" name="prenom" class="input1" placeholder="Prenom"/>
+                    <input type="text" id="nom" name="nom" class="input1" placeholder="Nom"/>
+
+                    <input type="email" id="email" name="email" class="input2" placeholder="Email"/>
+
+                    <div id="radio1">
+                        <input id="homme" type="radio" name="sexe"/>
+                        <label for="homme">Homme</label>
                     </div>
-                </p>
-             </form>
-             <form method="post" action="traitement.php">
-                <p>
-                    <label for="prénom"> </label>
-                    <input type="text" name="prénom" class="nom" placeholder="Metier" font-family="arial"/>
-                </p>
-            </form>
+                    <div id="radio2">
+                        <input id="femme" type="radio" name="sexe"/>
+                        <label for="femme">Femme</label>
+                    </div>
 
-        </div>
-        <div id="sujet">
-            <form method="post" action="traitement.php">
-                <p>
-                    <label for="nom"> </label>
-                    <input type="text" name="nom" class="email" placeholder="Sujet" maxlength="10" />
-                </p>
-            </form>
-        </div>
-        <div id="sujet2">
-            <form method="post" action="traitement.php">
-                <p>
-                    <label for="nom"> </label>
-                    <input type="text" name="nom" class="sujet2" placeholder="Sujet" maxlength="10" />
-                </p>
-            </form>
-        </div>
+                    <div id="date">
+                        <label for="naissance"> Date de naissance </label>
+                        <input type="date" id="naissance" name="naissance" value="0">
+                    </div>
+                    <select type="text" id="metier" name="metier" class="input1">
+                        <option selected disabled> Metier</option>
+                        <option> Etudiant </option>
+                        <option> Entrepeneur </option>
+                        <option> Cadre </option>
+                        <option> Salarié </option>
+                        <option> Sans emploi </option>
+                    </select>
 
-        </div>
+                    <input type="text" id="sujet" name="sujet" class="input2" placeholder="Sujet"/>
+                    
+                    <textarea type="text" id="message" name="message" placeholder="Message"></textarea>
+                    <input type="submit" value="Contacter">
+            </form>
+        </main>
+
+        <!--
+        <main>
+            <p>Nous Contacter</p>
+            <div id="identite">
+                <form method="post" action="traitement.php">
+                    <p>
+                        <label for="prénom"> </label>
+                        <input type="text" name="prénom" class="nom" placeholder="Prenom" maxlength="10" font-family="arial"/>
+                    </p>
+                </form>
+                <form method="post" action="traitement.php">
+                    <p>
+                        <label for="nom"> </label>
+                        <input type="text" name="nom" class="nom" placeholder="Nom"maxlength="10" />
+                    </p>
+                </form>
+
+            </div>
+                <div id="mail">
+                    <form method="post" action="traitement.php">
+                        <p>
+                            <label for="email"> </label>
+                            <input type="text" name="email" class="email" placeholder="Email"maxlength="10" font-family="arial"/>
+                        </p>
+                    </form>
+
+                </div>
+                <div id="mexe">
+                    <form method="post" action="traitement.php">
+                        <p>
+                            <div id="conteneur">
+                                <input type="radio" name="homme" class="sexe" /> <label for="homme"><div class="se">Homme</div></label><br />
+                                <input type="radio" name="femme" class="sexe" /> <label for="femme"><div class="se"> Femme</div></label><br />
+                            </div>
+                        </p>
+                    </form>
+                    <form method="post" action="traitement.php">
+                        <p>
+                            <label for="prénom"> </label>
+                            <input type="text" name="prénom" class="nom" placeholder="Metier" font-family="arial"/>
+                        </p>
+                    </form>
+
+                </div>
+                <div id="sujet">
+                    <form method="post" action="traitement.php">
+                        <p>
+                            <label for="nom"> </label>
+                            <input type="text" name="nom" class="email" placeholder="Sujet" maxlength="10" />
+                        </p>
+                    </form>
+                </div>
+                <div id="sujet2">
+                    <form method="post" action="traitement.php">
+                        <p>
+                            <label for="nom"> </label>
+                            <input type="text" name="nom" class="sujet2" placeholder="Sujet" maxlength="10" />
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </main>
+    -->
+        <footer>
+            <section id="footer-logo">
+                <img src="img/logo.svg">
+            </section>
+    
+            <section id="footer-content">
+                <p><span class="ShoesZone">Shoes Zone</span> est une entreprise de vente de d’authentique chaussure de fameuse marque sportive  a prix réduit.</p>
+                <p>Aucun des produit affichés n’est l’oeuvre de <span class="ShoesZone">Shoes Zone</span>.</p>
+                <div class="media-list">
+                    <p class="title">Follow us :</p>
+                    <ul class="list">
+                        <li> <a href="https://www.facebook.com"> <img class="facebook hoverable icon"/> </a></li>
+                        <li> <a href="https://www.instagram.com"> <img class="instagram hoverable icon"/> </a></li>
+                        <li> <a href="https://www.twitter.com"> <img class="twitter hoverable icon"/> </a></li>
+                        <li> <a href="https://www.youtube.com"> <img class="youtube hoverable icon"/> </a></li>
+                    </ul>
+                </div>
+    
+                <p id="copyright"> Copyright &copy <span class="ShoesZone">Shoes Zone</span> 2022. All right reserved.</p>
+            </section>
+    
+            <section id="footer-sitemap">
+                <h1> Sitemap</h1>
+                <ul>
+                    <li> <a href="index.html"> Home </a></li>
+                    <li> Catalogue 
+                        <ul>
+                            <li> <a href="nike.html"> Nike shoes</a></li>
+                            <li> <a href="jordan.html"> Jordan shoes</a></li>
+                            <li> <a href="adidas.html"> Adidas shoes</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href="contact.html">Contact</a></li>
+                </ul>
+            </section>
+        </footer>
 
     </body>
 </html>
