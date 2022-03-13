@@ -51,10 +51,23 @@
                         <label for="femme">Femme</label>
                     </div>
 
-                    <input type="text" id="metier" name="metier" class="input1" placeholder="Metier"/>
+                    <div id="date">
+                        <label for="naissance"> Date de naissance </label>
+                        <input type="date" id="naissance" name="naissance" value="0">
+                    </div>
+                    <select type="text" id="metier" name="metier" class="input1">
+                        <option selected disabled> Metier</option>
+                        <option> Etudiant </option>
+                        <option> Entrepeneur </option>
+                        <option> Cadre </option>
+                        <option> Salarié </option>
+                        <option> Sans emploi </option>
+                    </select>
 
                     <input type="text" id="sujet" name="sujet" class="input2" placeholder="Sujet"/>
+                    
                     <textarea type="text" id="message" name="message" placeholder="Message"></textarea>
+                    <input type="submit" value="Contacter">
             </form>
         </main>
 
