@@ -77,18 +77,19 @@ aside li > a {
     background-color: white;
     text-align: center;
 
-    --border-style : 3px solid red;
+    --border-style : 3px solid transparent;
     --border-radius: 25px
 }
-#catalog tbody tr { height: 100px;}
+#catalog tbody tr { position: relative; height: 100px;}
 
 /* bordure des ligne (border ne fonctionne pas sur tr)*/
 #catalog tbody td{
     border-bottom: var(--border-style);
     border-top: var(--border-style);
+    margin: 2px 0;
 }
-#catalog tbody td:first-child { border-left: var(--border-style);}
-#catalog tbody td:last-child { border-right: var(--border-style);}
+#catalog tbody td:first-child { border-left: var(--border-style); margin-left: 2px;}
+#catalog tbody td:last-child { border-right: var(--border-style); margin-right: 2px;}
 
 #catalog tr :first-child {
     border-top-left-radius: var(--border-radius);
@@ -103,6 +104,21 @@ aside li > a {
 
 #catalog tbody td:nth-child(4) {
     font-size: 2em;
+}
+
+#catalog td::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    background: linear-gradient(35deg, blue, red);
+    border-radius: inherit;
+    border-top-right-radius: calc(3px + var(--border-radius));
+    border-bottom-right-radius: calc(3px + var(--border-radius));
+    border-top-left-radius: calc(3px + var(--border-radius));
+    border-bottom-left-radius: calc(3px + var(--border-radius));
+    margin: -3px;
 }
 
 td {
