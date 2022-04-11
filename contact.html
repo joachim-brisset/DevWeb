@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title> ShoesZone | Contact </title>
+        <script type="text/javascript" src="js/adrien.js"></script>
 
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" type="text/css" href="css/contact.css">
@@ -36,8 +37,8 @@
 
         <main>
             <h1> Nous contacter : </h1>
-            <form method="POST" action="contact.php">
-                    <input type="text" id="prenom" name="prenom" class="input1" placeholder="Prenom"/>
+            <form method="POST" action="traitement.php" onSubmit="return valider()" name="form_Saisie">
+                    <input type="text" id="prenom" name="prenom" class="input1" placeholder="Prenom" />
                     <input type="text" id="nom" name="nom" class="input1" placeholder="Nom"/>
 
                     <input type="email" id="email" name="email" class="input2" placeholder="Email"/>
