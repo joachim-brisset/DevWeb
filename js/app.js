@@ -45,18 +45,18 @@ if(valeur > 0 && increment == -1){
 
 function Hidemoins(idMoins){
     var div = document.getElementById(idMoins);
-    div.style.visibility ='hidden';
+    div.disabled = true;
 }
 function Showmoins(idMoins){
     var div = document.getElementById(idMoins);
-    div.style.visibility ='visible';
+    div.disabled = false;
 }
 function Hideplus(idPlus){
     var div = document.getElementById(idPlus);
-    div.style.visibility ='hidden';
+    div.disabled =true;
 }
 
 function Showplus(idPlus){
     var div = document.getElementById(idPlus);
-    div.style.visibility ='visible';
+    div.disabled =false;
 }
