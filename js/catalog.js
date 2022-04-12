@@ -72,3 +72,13 @@ stockButton.addEventListener("click", () => {
   stocks = document.querySelector("#catalog col#productStock")
   toggleVisibility(stocks);
 })
+
+
+
+
+//zoom on product image when clicking on it
+document.querySelectorAll("#catalog img").forEach(
+  (el,i,p) => el.addEventListener("click", () => {
+      el.classList.toggle("zoomed")
+  })
+)

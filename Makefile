@@ -1,3 +1,3 @@
 help : 
 
-zip : zip "ING1GMI4-BRISSET-MONTAIGNE" -r * -x Makefile
+zip : zip "ING1GMI4-BRISSET-MONTAIGNE-AGNESA" -r * -x Makefile

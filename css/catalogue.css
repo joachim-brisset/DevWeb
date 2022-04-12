@@ -136,3 +136,10 @@ td {
     right:  1em;
     top: 1em;
 }
+
+#catalog img {
+    transition: transform 0.2s ease-in-out;
+}
+#catalog img.zoomed {
+    transform: scale(1.5)
+}
