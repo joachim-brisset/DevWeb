@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/catalogue.css">
+    <script src="js/catalog.js" defer></script>
+
 </head>
 <body>
     <header>
@@ -45,28 +47,86 @@
             </nav>
         </aside>
         <div id="catalog">
+            <button id="showStockButton"> Afficher les stocks </button>
+
             <h1> Nike </h1>
             <table>
+                <col id="productImg" />
+                <col id="productRef" />
+                <col id="productDesc"/>
+                <col id="productStock"/>
+                <col id="productCart"/>
+                <col id="productPrice" />
                 <thead>
                     <tr>
-                        <th>Aperçu</th> <th>Reference</th> <th>Designation</th> <th>Prix</th>
+                        <th>Aperçu</th> <th>Reference</th> <th>Designation</th> <th> Stock</th> <th>Panier</th> <th>Prix</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="img/shoes/nike/nike1.jpg"></td> <td>N20220101-001</td> <td>Chaussure Nike crater impact noire</td> <td>109€</td>
+                        <td><img src="img/shoes/nike/nike1.jpg"></td> <td>N20220101-001</td> <td>Chaussure Nike crater impact noire</td>
+                        <td>
+                            <span class="productStock">12</span>
+                        </td>
+                        <td>
+                            <input type="button" class="minusButton" value="-">
+                            <input type="number" class="cartQuantity" size="8" value="0" min="0" max="6">
+                            <input type="button" class="plusButton" value="+">
+                            <input type="button" value="Ajoutez au panier">
+                        </td>
+                        <td>109€</td>
                     </tr>
                     <tr>
-                        <td><img src="img/shoes/nike/nike2.jpg"></td> <td>N20220101-002</td> <td>Chaussure Nike Tuned 1 essential blanche.</td> <td>169€</td>
+                        <td><img src="img/shoes/nike/nike2.jpg"></td> <td>N20220101-002</td> <td>Chaussure Nike Tuned 1 essential blanche.</td>
+                        <td>
+                            <span class="productStock">6</span>
+                        </td>
+                        <td>
+                            <input type="button" class="minusButton" value="-">
+                            <input type="number" class="cartQuantity" size="8" value="0" min="0" max="6">
+                            <input type="button" class="plusButton" value="+">
+                            <input type="button" value="Ajoutez au panier">
+                        </td>
+                        <td>169€</td>
                     </tr>
                     <tr>
-                        <td><img src="img/shoes/nike/nike3.jpg"></td> <td>N20220101-003</td> <td>Chaussure en cuire Nike blazer mid blanche.</td> <td>99€</td>
+                        <td><img src="img/shoes/nike/nike3.jpg"></td> <td>N20220101-003</td> <td>Chaussure en cuire Nike blazer mid blanche.</td>
+                        <td>
+                            <span class="productStock">24</span>
+                        </td>
+                        <td>
+                            <input type="button" class="minusButton" value="-">
+                            <input type="number" class="cartQuantity" size="8" value="0" min="0" max="6">
+                            <input type="button" class="plusButton" value="+">
+                            <input type="button" value="Ajoutez au panier">
+                        </td>
+                        <td>99€</td>
                     </tr>
                     <tr>
-                        <td><img src="img/shoes/nike/nike4.jpg"></td> <td>N20220101-004</td> <td>Chaussure Nike bleu et noir avec logo et lacets à semelle plate.</td> <td>80€</td>
+                        <td><img src="img/shoes/nike/nike4.jpg"></td> <td>N20220101-004</td> <td>Chaussure Nike bleu et noir avec logo et lacets à semelle plate.</td>
+                        <td>
+                            <span class="productStock">9</span>
+                        </td>
+                        <td>
+                            <input type="button" class="minusButton" value="-">
+                            <input type="number" class="cartQuantity" size="8" value="0" min="0" max="6">
+                            <input type="button" class="plusButton" value="+">
+                            <input type="button" value="Ajoutez au panier">
+                        </td>
+                        <td>80€</td>
                     </tr>
                     <tr>
-                        <td><img src="img/shoes/nike/nike5.jpg"></td> <td>N20220101-005</td> <td><p>Chaussure de tennis Nike bleu. Semelle renforcée pour un meilleur rebond et assurant un bon maintien du pied.</p></td> <td>120€</td>
+                        <td><img src="img/shoes/nike/nike5.jpg"></td> <td>N20220101-005</td> <td><p>Chaussure de tennis Nike bleu. Semelle renforcée pour un meilleur rebond et assurant un bon maintien du pied.</p></td>
+                        <td>
+                            <span class="productStock">3</span>
+                        </td>
+                        <td>
+                            <input type="button" class="minusButton" value="-">
+                            <input type="number" class="cartQuantity" size="8" value="0" min="0" max="6">
+                            <input type="button" class="plusButton" value="+">
+                            <input type="button" value="Ajoutez au panier">
+                        </td>
+                        <td>120€</td>
                     </tr>
                 </tbody>
             </table>

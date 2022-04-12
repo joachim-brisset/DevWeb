@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/catalogue.css">
+    <script src="js/catalog.js" defer></script>
+
 </head>
 <body>
     <header>
@@ -45,28 +47,86 @@
             </nav>
         </aside>
         <div id="catalog">
+            <button id="showStockButton"> Afficher les stocks </button>
+
             <h1> Puma </h1>
             <table>
+                <col id="productImg" />
+                <col id="productRef" />
+                <col id="productDesc"/>
+                <col id="productStock"/>
+                <col id="productCart"/>
+                <col id="productPrice" />
                 <thead>
                     <tr>
-                        <th>Aperçu</th> <th>Reference</th> <th>Designation</th> <th>Prix</th>
+                        <th>Aperçu</th> <th>Reference</th> <th>Designation</th> <th> Stock</th> <th>Panier</th> <th>Prix</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="img/shoes/puma/puma1.jpg"></td> <td>P20220101-001</td> <td>Chaussure Puma stylisé</td> <td>126€</td>
+                        <td><img src="img/shoes/puma/puma1.jpg"></td> <td>P20220101-001</td> <td>Chaussure Puma stylisé</td>
+                        <td>
+                            <span class="productStock">6</span>
+                        </td>
+                        <td>
+                            <input type="button" class="minusButton" value="-">
+                            <input type="number" class="cartQuantity" size="8" value="0" min="0" max="6">
+                            <input type="button" class="plusButton" value="+">
+                            <input type="button" value="Ajoutez au panier">
+                        </td>
+                        <td>126€</td>
                     </tr>
                     <tr>
-                        <td><img src="img/shoes/puma/puma2.jpg"></td> <td>P20220101-002</td> <td>Chaussure Puma stylisé</td> <td>180€</td>
+                        <td><img src="img/shoes/puma/puma2.jpg"></td> <td>P20220101-002</td> <td>Chaussure Puma stylisé</td>
+                        <td>
+                            <span class="productStock">6</span>
+                        </td>
+                        <td>
+                            <input type="button" class="minusButton" value="-">
+                            <input type="number" class="cartQuantity" size="8" value="0" min="0" max="6">
+                            <input type="button" class="plusButton" value="+">
+                            <input type="button" value="Ajoutez au panier">
+                        </td>
+                        <td>180€</td>
                     </tr>
                     <tr>
-                        <td><img src="img/shoes/puma/puma3.jpg"></td> <td>P20220101-003</td> <td>Chaussure Puma noir et grise. Semelle renforcé.</td> <td>95€</td>
+                        <td><img src="img/shoes/puma/puma3.jpg"></td> <td>P20220101-003</td> <td>Chaussure Puma noir et grise. Semelle renforcé.</td>
+                        <td>
+                            <span class="productStock">6</span>
+                        </td>
+                        <td>
+                            <input type="button" class="minusButton" value="-">
+                            <input type="number" class="cartQuantity" size="8" value="0" min="0" max="6">
+                            <input type="button" class="plusButton" value="+">
+                            <input type="button" value="Ajoutez au panier">
+                        </td>
+                        <td>95€</td>
                     </tr>
                     <tr>
-                        <td><img src="img/shoes/puma/puma4.jpg"></td> <td>P20220101-004</td> <td>Chaussure Puma de course grise et bleu </td> <td>134€</td>
+                        <td><img src="img/shoes/puma/puma4.jpg"></td> <td>P20220101-004</td> <td>Chaussure Puma de course grise et bleu </td>
+                        <td>
+                            <span class="productStock">6</span>
+                        </td>
+                        <td>
+                            <input type="button" class="minusButton" value="-">
+                            <input type="number" class="cartQuantity" size="8" value="0" min="0" max="6">
+                            <input type="button" class="plusButton" value="+">
+                            <input type="button" value="Ajoutez au panier">
+                        </td>
+                        <td>134€</td>
                     </tr>
                     <tr>
-                        <td><img src="img/shoes/puma/puma5.jpg"></td> <td>P20220101-005</td> <td>Chaussure Puma à semelle plate, noir et blanche avec lacet jaune</td> <td>80€</td>
+                        <td><img src="img/shoes/puma/puma5.jpg"></td> <td>P20220101-005</td> <td>Chaussure Puma à semelle plate, noir et blanche avec lacet jaune</td>
+                        <td>
+                            <span class="productStock">6</span>
+                        </td>
+                        <td>
+                            <input type="button" class="minusButton" value="-">
+                            <input type="number" class="cartQuantity" size="8" value="0" min="0" max="6">
+                            <input type="button" class="plusButton" value="+">
+                            <input type="button" value="Ajoutez au panier">
+                        </td>
+                        <td>80€</td>
                     </tr>
                 </tbody>
             </table>

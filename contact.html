@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title> ShoesZone | Contact </title>
-        <script type="text/javascript" src="js/adrien.js" defer>   </script>
+        <script type="text/javascript" src="js/contact.js" defer>   </script>
 
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" type="text/css" href="css/contact.css">
@@ -37,21 +37,21 @@
 
         <main>
             <h1> Nous contacter : </h1>
-            <form method="POST" action="traitement.php" id="form_Saisie">
+            <form method="POST" action="traitement.php" id="form_Saisie" novalidate>
 
                     <div id="prenom">
-                        <input type="text" id="prenom" name="prenom" class="input1" placeholder="Prenom" />
+                        <input type="text" name="prenom" class="input1" placeholder="Prenom" />
                         <span class="inputError"></span>
                     </div>
 
                     <div id="nom">
                         <input type="text" name="nom" class="input1" placeholder="Nom"/>
-                        <span  class="inputError"></span>
+                        <span class="inputError"></span>
                     </div>
                     
                     <div id="email">
                         <input type="email" name="email" class="input2" placeholder="Email"/>
-                        <span  class="inputError"></span>
+                        <span class="inputError"></span>
                     </div>
                     <div id="lol">
                         <div id="radio1">
@@ -62,11 +62,13 @@
                             <input id="femme" type="radio" name="sexe"/>
                             <label for="femme">Femme</label>
                         </div>
+                        <span id="fixSexe" class="inputError"></span>
                     </div>
 
                     <div id="date">
                         <label for="naissance"> Date de naissance </label>
                         <input type="date" id="naissance" name="naissance" value="0">
+                        <span class="inputError"></span>
                     </div>
                     <div id="metier">
                         <select type="text" name="metier" class="input1">
@@ -77,6 +79,7 @@
                             <option> Salarié </option>
                             <option> Sans emploi </option>
                         </select>
+                        <span class="inputError"></span>
                     </div>
                     <div id="sujet">
                         <input type="text" name="sujet" class="input2" placeholder="Sujet"/>
@@ -86,74 +89,11 @@
                         <textarea type="text" name="message" placeholder="Message"></textarea>
                         <span class="inputError"></span>
                     </div>
+
                     <input type="submit" value="Contacter">
             </form>
         </main>
 
-        <!--
-        <main>
-            <p>Nous Contacter</p>
-            <div id="identite">
-                <form method="post" action="traitement.php">
-                    <p>
-                        <label for="prénom"> </label>
-                        <input type="text" name="prénom" class="nom" placeholder="Prenom" maxlength="10" font-family="arial"/>
-                    </p>
-                </form>
-                <form method="post" action="traitement.php">
-                    <p>
-                        <label for="nom"> </label>
-                        <input type="text" name="nom" class="nom" placeholder="Nom"maxlength="10" />
-                    </p>
-                </form>
-
-            </div>
-                <div id="mail">
-                    <form method="post" action="traitement.php">
-                        <p>
-                            <label for="email"> </label>
-                            <input type="text" name="email" class="email" placeholder="Email"maxlength="10" font-family="arial"/>
-                        </p>
-                    </form>
-
-                </div>
-                <div id="mexe">
-                    <form method="post" action="traitement.php">
-                        <p>
-                            <div id="conteneur">
-                                <input type="radio" name="homme" class="sexe" /> <label for="homme"><div class="se">Homme</div></label><br />
-                                <input type="radio" name="femme" class="sexe" /> <label for="femme"><div class="se"> Femme</div></label><br />
-                            </div>
-                        </p>
-                    </form>
-                    <form method="post" action="traitement.php">
-                        <p>
-                            <label for="prénom"> </label>
-                            <input type="text" name="prénom" class="nom" placeholder="Metier" font-family="arial"/>
-                        </p>
-                    </form>
-
-                </div>
-                <div id="sujet">
-                    <form method="post" action="traitement.php">
-                        <p>
-                            <label for="nom"> </label>
-                            <input type="text" name="nom" class="email" placeholder="Sujet" maxlength="10" />
-                        </p>
-                    </form>
-                </div>
-                <div id="sujet2">
-                    <form method="post" action="traitement.php">
-                        <p>
-                            <label for="nom"> </label>
-                            <input type="text" name="nom" class="sujet2" placeholder="Sujet" maxlength="10" />
-                        </p>
-                    </form>
-                </div>
-
-            </div>
-        </main>
-    -->
         <footer>
             <section id="footer-logo">
                 <img src="img/logo.svg">

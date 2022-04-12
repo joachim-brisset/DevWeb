@@ -1,4 +1,3 @@
-
 main {
     position: relative;
     display: flex;
@@ -66,10 +65,12 @@ aside li > a {
 }
 
 /* taille des colonnes */
-#catalog table > thead th:nth-child(1) { width: 15%; min-width: 137px;}
-#catalog table > thead th:nth-child(2) { width: 20%;}
-#catalog table > thead th:nth-child(3) { width: 50%;}
-#catalog table > thead th:nth-child(4) { width: 15%;}
+#catalog table col#productImg { width: 10%; min-width: 137px;}
+#catalog table col#productRef { width: 20%;}
+#catalog table col#productDesc { width: 35%;}
+#catalog table col#productStock { width: 10%;}
+#catalog table col#productCart { width: 15%;}
+#catalog table col#productPrice { width: 10%;}
 
 /* style des ligne*/
 #catalog tr {
@@ -91,18 +92,18 @@ aside li > a {
 #catalog tbody td:first-child { border-left: var(--border-style); margin-left: 2px;}
 #catalog tbody td:last-child { border-right: var(--border-style); margin-right: 2px;}
 
-#catalog tr :first-child {
+#catalog tr > :first-child {
     border-top-left-radius: var(--border-radius);
     border-bottom-left-radius: var(--border-radius);
     padding-left: calc(var(--border-radius)/2);
 }
-#catalog tr :last-child {
+#catalog tr > :last-child {
     border-top-right-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
     padding-right: calc(var(--border-radius)/2);
 }
 
-#catalog tbody td:nth-child(4) {
+#catalog tbody td:nth-child(6) {
     font-size: 2em;
 }
 
@@ -128,4 +129,10 @@ td {
 #posFix1 {
     position: relative;
     top:-40px;
+}
+
+#showStockButton {
+    position: absolute;
+    right:  1em;
+    top: 1em;
 }
