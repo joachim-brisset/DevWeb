@@ -56,19 +56,17 @@
                     <tr>
                         <td><img src="img/shoes/adidas/adidas 1.jfif"></td> <td>A20220101-001</td> <td>Chaussure Puma rouge et noir</td> 
                         <td class="stock">
-                            <button onclick="Fonctionhid('stock1','al1')">Stock</button>
-                            <div class="al0" id="stock1" style="display:none;" >
-                                <a class="inf">Stock : </a>
-                                <a class="inf">6</a>
+                            <div class="stockcontainer" >
+                                <p>Stock : </p>
+                                <input type="number" size="4" value="6" readonly="true" class="dn">
                             </div>
-                            <input type="text" id="sk1" size="4" value="6" readonly="true" class="dn" style="display:none;">
                         </td>
                         <td class="achat">
-                              <div class="al" id="al1" style="display: none;">
-                                  <input type="button" value="-" id="decre1" onclick="modifier(-1,'qt1','incre1','sk1','decre1')">
-                                  <input type="button" size="8" value="0" id="qt1">
-                                  <input type="button" value="+" id="incre1" onclick="modifier(1,'qt1','incre1','sk1','decre1')">
-                                  <input type="button" value="Ajoutez au panier" id="ajouter">
+                              <div class="cartmodifier">
+                                  <input class="minusBut" type="button" value="-">
+                                  <input class="cartquantity" type="number" size="8" value="0" min="0">
+                                  <input class="plusBut" type="button" value="+">
+                                  <input type="button" value="Ajoutez au panier">
                               </div>
                         </td>
                         <td>126€</td>

@@ -1,62 +1,43 @@
-function Fonctionhid(a,b) {
-    var div = document.getElementById(a);
-    var div2 = document.getElementById(b);
+products = document.querySelectorAll("#catalog tbody tr")
 
-    if (div.style.display === "none") {
-      div.style.display = "block";
-    } else {
-      div.style.display = "none";
-    }
-    if (div2.style.display === "none") {
-        div2.style.display = "block";
-      } else {
-        div2.style.display = "none";
+
+products.forEach(product => {
+  var stockinp = product.getElementsByClassName("dn")[0];
+  var minus = product.getElementsByClassName("minusBut")[0];
+  var plus = product.getElementsByClassName("plusBut")[0];
+  var cart = product.getElementsByClassName("cartquantity")[0];
+    plus.addEventListener("click", (event) =>{
+      var stock = parseInt(stockinp.value)
+      var valeur = parseInt(cart.value)
+      if(valeur < stock){
+        valeur ++;
+        cart.value = valeur;
+        minus.disabled = false;
+        if(valeur == stock){
+        plus.disabled = true;
+        }else{
+        plus.disabled = false;
+        }
       }
-  }
-
-
-
-function modifier(increment,idValeur,idPlus,idStock,idMoins) {
-       
-var valeur = parseInt(document.getElementById(idValeur).value);
-var stock = parseInt(document.getElementById(idStock).value);
-if(valeur < stock && increment == 1){
-  valeur += increment;
-  document.getElementById(idValeur).value = valeur;
-  Showmoins(idMoins);
-  if(valeur == stock){
-  Hideplus(idPlus);
-  }else{
-  Showplus(idPlus);
-  }
-}
-if(valeur > 0 && increment == -1){
-  valeur += increment;
-  document.getElementById(idValeur).value = valeur;
-  Showplus(idPlus);
-  if(valeur == 0){
-  Hidemoins(idMoins);
-  }else{
-  Showmoins(idMoins);
-  }
-}
-}
-
-
-function Hidemoins(idMoins){
-    var div = document.getElementById(idMoins);
-    div.disabled = true;
-}
-function Showmoins(idMoins){
-    var div = document.getElementById(idMoins);
-    div.disabled = false;
-}
-function Hideplus(idPlus){
-    var div = document.getElementById(idPlus);
-    div.disabled =true;
-}
-
-function Showplus(idPlus){
-    var div = document.getElementById(idPlus);
-    div.disabled =false;
-}
+    })
+    minus.addEventListener("click", (event) =>{
+      var valeur = parseInt(cart.value)
+      if(valeur > 0){
+        valeur --;
+        cart.value = valeur;
+        plus.disabled = false;
+        if(valeur == 0){
+        minus.disabled=true;
+        }else{
+        minus.disabled=false;
+        }
+      }
+    })
+    cart.addEventListener("change", (event) =>{
+      
+      if(parseInt(cart.value) > parseInt(stockinp.value))
+      {
+        cart.value=stockinp.value;
+      }
+    })
+})
