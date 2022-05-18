@@ -22,15 +22,15 @@
         <section id="footer-sitemap">
             <h1> Sitemap</h1>
             <ul>
-                <li> <a href="index.html"> Home </a></li>
+                <li> <a href="index"> Home </a></li>
                 <li> Catalogue 
                     <ul>
-                        <li> <a href="nike.html"> Nike shoes</a></li>
-                        <li> <a href="jordan.html"> Jordan shoes</a></li>
-                        <li> <a href="adidas.html"> Adidas shoes</a></li>
+                        <li> <a href="nike"> Nike shoes</a></li>
+                        <li> <a href="puma"> Puma shoes</a></li>
+                        <li> <a href="adidas"> Adidas shoes</a></li>
                     </ul>
                 </li>
-                <li> <a href="contact.html">Contact</a></li>
+                <li> <a href="contact">Contact</a></li>
             </ul>
         </section>
 </footer>

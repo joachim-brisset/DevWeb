@@ -12,15 +12,15 @@
 
 </head>
 <body>
-    <?php include "../views/component/header.php" ?>
+    <?php include "component/header.php" ?>
     <main>
         <aside>
             <nav>
                 <h1> Catalogue </h1>
                 <ul>
-                    <li><a href="nike.html">Nike </a></li>
-                    <li><a href="puma.html">Puma </a></li>
-                    <li><a href="adidas.html">Adidas </a></li>
+                    <li><a href="nike">Nike </a></li>
+                    <li><a href="puma">Puma </a></li>
+                    <li><a href="adidas">Adidas </a></li>
                 </ul>
             </nav>
         </aside>

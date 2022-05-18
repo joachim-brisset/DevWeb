@@ -1,6 +1,4 @@
-<?php include "../models/products.php" ?> </php>
-
-
+<?php include "../models/products.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,28 +8,27 @@
 
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/catalogue.css">
-
     <script src="../js/catalog.js" defer></script>
+
 </head>
 <body>
-    <?php include "components/header.php" ?> </php>
-
+    <?php include "component/header.php" ?>
     <main>
         <aside>
             <nav>
                 <h1> Catalogue </h1>
                 <ul>
-                    <li><a href="nike.html">Nike </a></li>
-                    <li><a href="puma.html">Puma </a></li>
-                    <li><a href="adidas.html">Adidas </a></li>
+                    <li><a href="nike">Nike </a></li>
+                    <li><a href="puma">Puma </a></li>
+                    <li><a href="adidas">Adidas </a></li>
                 </ul>
             </nav>
         </aside>
         <div id="catalog">
             <button id="showStockButton"> Afficher les stocks </button>
+            
             <h1> Adidas </h1>
             <table>
-
                 <col id="productImg" />
                 <col id="productRef" />
                 <col id="productDesc"/>
@@ -73,7 +70,7 @@
         </div>
     </main>
 
-    <?php include "components/footer.php" ?> </php>
+    <?php include "component/footer.php" ?> </php>
 </body>
 </html>
 

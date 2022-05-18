@@ -7,16 +7,16 @@
 
     <nav id="main-nav">
         <ul class="inline main">
-            <li> <a href="index.html">Accueil</a> </li>
+            <li> <a href="index">Accueil</a> </li>
             <li class="dropdown">
                 <p class="dropdown-title">Catalogue</p>
                 <ul class="inline secondary">
-                    <li><a href="nike.html">Nike </a></li>
-                    <li><a href="puma.html">Puma </a></li>
-                    <li><a href="adidas.html">Adidas </a></li>
+                    <li><a href="nike">Nike </a></li>
+                    <li><a href="puma">Puma </a></li>
+                    <li><a href="adidas">Adidas </a></li>
                 </ul>
             </li>
-            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Contact">Contact</a></li>
         </ul>
     </nav>
 </header>
