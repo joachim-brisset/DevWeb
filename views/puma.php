@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShoesZone | Nike </title>
+    <title>ShoesZone | Puma </title>
 
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/catalogue.css">
@@ -12,7 +12,7 @@
 
 </head>
 <body>
-   <?php include "component/header.php"; ?>
+    <?php include "../views/component/header.php" ?>
     <main>
         <aside>
             <nav>
@@ -27,7 +27,7 @@
         <div id="catalog">
             <button id="showStockButton"> Afficher les stocks </button>
 
-            <h1> Nike </h1>
+            <h1> Puma </h1>
             <table>
                 <col id="productImg" />
                 <col id="productRef" />
@@ -41,10 +41,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                <?php
-                    $nike = Product::withBrand("nike");
+                <?php 
+                    $puma = Product::withBrand("puma");
 
-                    foreach ($nike as $valeur)
+                    foreach ($puma as $valeur)
                     {
                         ?>
                         <tr>
@@ -67,6 +67,6 @@
             </table>
         </div>
     </main>
-    <?php include "component/footer.php"; ?>
+    <?php include "../views/component/header.php" ; ?>
 </body>
 </html>
