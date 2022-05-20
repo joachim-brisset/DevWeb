@@ -11,7 +11,7 @@
 
     <body>
         
-        <?php include "components/header.php" ?> </php>
+        <?php include "component/header.php" ?> </php>
 
         <main>
             <h1> Nous contacter : </h1>
@@ -72,7 +72,7 @@
             </form>
         </main>
 
-        <?php include "components/footer.php" ?> </php>
+        <?php include "component/footer.php" ?> </php>
 
     </body>
 </html>
